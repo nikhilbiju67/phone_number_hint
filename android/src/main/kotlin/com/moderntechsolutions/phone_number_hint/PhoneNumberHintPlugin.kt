@@ -65,7 +65,7 @@ class PhoneNumberHintPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, A
     }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
-        activity = binding.activity as FlutterActivity
+        activity = binding.activity
         binding.addActivityResultListener(this)
     }
 
@@ -74,7 +74,7 @@ class PhoneNumberHintPlugin : FlutterPlugin, MethodCallHandler, ActivityAware, A
     }
 
     override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
-        activity = binding.activity as FlutterActivity
+        activity = binding.activity
         binding.addActivityResultListener(this)
     }
 
